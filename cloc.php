@@ -120,6 +120,7 @@ class CodeCount
         return array_sum(explode(' ', microtime()));
     }
 }
+echo "\033[32m";
 $msg  = "错误！请输入正确的路径. 或者输入 cloc -h /--help 查看使用帮助.\n";
 $path = isset($argv[1]) ? $argv[1] : '.';
 if ($path == '-h' || $path == '--help') {
@@ -134,3 +135,4 @@ if ($path == '-h' || $path == '--help') {
   }
 }
 echo $msg;
+echo "\033[0m";
